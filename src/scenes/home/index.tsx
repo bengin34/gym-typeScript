@@ -22,20 +22,20 @@ function Home({ setSelectedPage }: Props) {
         {/* {main header} */}
         <div className="z-10 mt-32 md:basis-3/5 " >
           {/* headings */}
-          <div>
-            <div>
-              <div>
+          <div className="md:-mt-20" >
+            <div  className="relative " >
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext " >
                 <img src={HomePageText} alt="home-page-text" />
               </div>
             </div>
-            <p>
+            <p className="mt-8 text-sm  " >
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
           </div>
           {/* Actions */}
-          <div>
+          <div className="mt-8 flex items-center gap-8 md:justify-start" >
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
@@ -49,7 +49,9 @@ function Home({ setSelectedPage }: Props) {
         </div>
 
         {/* image */}
-        <div>
+        <div className="flex basis-3/5 justify-center md:z-10
+        md:ml-40 md:mt-16 md:justify-end
+        " >
             <img src={HomePageGraphic} alt="home-page-graphic" />
         </div>
       </div>
