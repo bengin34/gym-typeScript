@@ -12,6 +12,19 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 }; 
 
+/**
+* @description This function renders the home page layout of a website using React
+* Motion. It sets up animations for the header and action buttons based on the
+* viewport size.
+* 
+* @param { Props } setSelectedPage - The `setSelectedPage` input parameter is a prop
+* that allows the component to update the selected page when a certain action is
+* performed (e.g., joining now or learning more). It takes a function as an argument
+* and passes it the current selected page as its input.
+* 
+* @returns { Component } The output returned by the `Home` function is a markup
+* string that represents the content and structure of the home page.
+*/
 function Home({ setSelectedPage }: Props) {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
@@ -61,6 +74,11 @@ function Home({ setSelectedPage }: Props) {
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
+{/**
+* @description This function defines an anchor link element that upon clicking will
+* change the value of the `selectedPage` state to `'ContactUs'` and jump to the
+* corresponding anchor point on the page with the id of `'ContactUs'`.
+*/}
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
