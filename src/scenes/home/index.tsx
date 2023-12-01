@@ -10,7 +10,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
-};
+}; 
 
 function Home({ setSelectedPage }: Props) {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
