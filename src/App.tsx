@@ -4,6 +4,7 @@ import Benefits from "@/scenes/benefits"
 import OurClasses from "@/scenes/ourClasses"
 import ContactUs from "@/scenes/contactUs"
 import Footer from "@/scenes/footer"
+import Hotjar from '@hotjar/browser';
 
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
@@ -13,7 +14,11 @@ function App() {
   );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
+  const siteId = 3827076;
+  const hotjarVersion = 6;
+
   useEffect(() => {
+    Hotjar.init(siteId, hotjarVersion);
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
